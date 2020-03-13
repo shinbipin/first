@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emp Information</title>
+</head>
+
+<body>
+
+    <h2>Emp Registration Page..!</h2>
+
+
+    {{msg}} <br>
+
+    <form action="http://localhost:5000/scp/save/" method="post" enctype = "multipart/form-data">
+        Emp Id : <input type="text" readonly name="empid" value="{{emp.empId}}"><br><br>
+        Emp Name: <input type="text"  name="empnm" value="{{emp.empName}}"><br><br>
+        Emp Sal: <input type="text"  name="empsal" value="{{emp.empSal}}"><br><br>
+        Emp Age: <input type="text"  name="empage" value="{{emp.empAge}}"><br><br>
+        Emp Profile Pic : <input type="file" name="pic"><br><br>
+
+        <input type="submit"/>
+    </form>
+
+    <table border="1">
+            <thead>
+                <td>Emp Id</td>
+                <td>Emp Name</td>
+                <td>Emp Salary</td>
+                <td>Emp Age</td>
+                <td>Emp ProfilePic</td>
+            </thead>
+
+            {% for emp in employees %}
+                <tbody>
+                <td>{{emp.empId}}</td>
+                <td>{{emp.empName}}</td>
+                <td>{{emp.empSal}}</td>
+                <td>{{emp.empAge}}</td>
+
+                <td><div><img src = "{{url_for('static', filename=emp.emppic) }}"></div></td>
+                </tbody>
+            {% endfor %}
+    </table>
+
+
+
+
+
+</body>
+</html>
