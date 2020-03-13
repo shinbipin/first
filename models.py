@@ -21,3 +21,6 @@ class Emp(db.Model):
 
 db.create_all()
 
+
+''' hibyeee
+=======
