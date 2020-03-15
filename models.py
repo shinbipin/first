@@ -23,5 +23,5 @@ class Emp(db.Model):
 
 db.create_all()
 ''' change in model
-
+'''change in git
 
