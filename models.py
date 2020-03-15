@@ -17,11 +17,12 @@ class Emp(db.Model):
     empAge = db.Column('emp_age', db.Integer())
     emppic =  db.Column('emp_pic',db.String(256),nullable=True,default='NA')
 
-    @staticmethod
+   '''''' @staticmethod
     def dummyemp():
         return Emp(empId=0,empName='',empSal=0.0,empAge=0)
 
 db.create_all()
 ''' change in model
 '''change in git
+
 
