@@ -22,5 +22,6 @@ class Emp(db.Model):
         return Emp(empId=0,empName='',empSal=0.0,empAge=0)
 
 db.create_all()
+''' change in model
 
 
